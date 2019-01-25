@@ -1,0 +1,26 @@
+body {
+    background: url('bg2.jpg') center;
+    font-family: Raleway;
+}
+
+.neon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px;
+    text-shadow: 0 0 20px #ff005b;
+    box-shadow: inset 1px 0px 15px 1px #ff005b, 1px 0px 15px 1px #ff005b;
+}
+
+.neon::before {
+    content: attr(data-text);
+    position: absolute;
+    z-index: -1;
+    color: #ff005b;
+    filter: blur(5px)
+}
